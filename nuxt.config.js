@@ -4,9 +4,9 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'metodichka',
+    title: 'Metodichka',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'ru'
     },
     meta: [
       { charset: 'utf-8' },
@@ -15,12 +15,15 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/logo-white.svg' }
     ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    {src: './assets/normalize.scss', type: 'scss', ssr: true},
+    {src: './assets/fonts/Ubuntu/stylesheet.css', type: 'css', ssr: true},
+    {src: './assets/styles.scss', type: 'scss', ssr: true}
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
