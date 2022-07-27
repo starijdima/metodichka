@@ -25,9 +25,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  @import "assets/vars";
   .menu_btn{
-    width: 88px;
-    height: 88px;
+    width: calc-px(88);
+    height: calc-px(88);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -43,9 +44,9 @@ export default {
       }
     }
     &__item{
-      width: 35px;
-      height: 4px;
-      border-radius: 10px;
+      width: calc-px(35);
+      height: calc-px(4);
+      border-radius: calc-px(10);
       background: #000;
       position: absolute;
       transition: .2s;

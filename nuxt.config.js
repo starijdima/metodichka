@@ -23,7 +23,8 @@ export default {
   css: [
     {src: './assets/normalize.scss', type: 'scss', ssr: true},
     {src: './assets/fonts/Ubuntu/stylesheet.css', type: 'css', ssr: true},
-    {src: './assets/styles.scss', type: 'scss', ssr: true}
+    {src: './assets/styles.scss', type: 'scss', ssr: true},
+    {src: './assets/resize.css', type: 'css', ssr: true}
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins

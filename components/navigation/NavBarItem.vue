@@ -21,12 +21,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  @import "assets/vars";
   .nav_bar__list_item__link{
     color: #000;
     transition: .2s;
     height: 100%;
-    padding: 0 20px;
-    font-size: 20px;
+    padding: 0 calc-px(20);
+    font-size: calc-px(20);
     font-weight: 400;
     display: flex;
     align-items: center;

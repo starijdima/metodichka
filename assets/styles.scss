@@ -1,3 +1,128 @@
+@import "vars";
+@import "news";
 .nuxt-link-exact-active{
   color: #CB5F12 !important;
+}
+
+.content{
+  width: 91vw;
+  margin: 0 auto;
+}
+
+.lazy-load{
+  opacity: 0;
+  transform: scale(1.05);
+  animation: lazyContent .5s ease-in-out forwards;
+}
+
+.section-title{
+  font-style: normal;
+  font-weight: 700;
+  font-size: calc-px(27);
+  line-height: calc-px(31);
+  color: #000000;
+  margin-bottom: calc-px(16);
+}
+
+.page{
+  padding-top: calc-px(88);
+  &-main{
+    margin-top: calc-px(50);
+    .content{
+      display: flex;
+      flex-direction: row;
+    }
+    .left-column{
+      width: calc-px(425);
+      display: flex;
+      flex-direction: column;
+      &__p{
+        font-style: normal;
+        font-weight: 400;
+        font-size: calc-px(20);
+        line-height: calc-px(25);
+        color: #000000;
+        margin-top: calc-px(20);
+        opacity: 0;
+        margin-left: calc-px(-30);
+        animation: lazyText .6s .6s ease-in-out forwards;
+        width: 100%;
+      }
+    }
+    .middle-column{
+      display: flex;
+      flex-direction: column;
+      margin-left: calc-px(100);
+      &__services{
+        width: calc-px(628);
+        display: flex;
+        flex-direction: column;
+        margin-bottom: calc-px(38);
+        &-container{
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          &__item{
+            padding: calc-px(16);
+            border: calc-px(2) solid #000000;
+            border-radius: calc-px(9);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-right: calc-px(16);
+            margin-top: calc-px(16);
+            transition: .3s;
+            &-logo{
+              transition: .3s;
+              path{
+                fill: #000;
+                transition: .3s;
+              }
+            }
+            &:hover{
+              border: calc-px(2) solid #CB5F12;
+              transition: .3s;
+              .middle-column__services-container__item-logo{
+                path{
+                  fill: #CB5F12;
+                  transition: .3s;
+                }
+              }
+              .middle-column__services-container__item-text{
+                color: #CB5F12;
+                transition: .3s;
+              }
+            }
+            &-text{
+              padding: 0 18px;
+              color: #000000;
+              transition: .3s;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes lazyContent {
+  from{
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  to{
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes lazyText {
+  from{
+    margin-left: calc-px(-30);
+    opacity: 0;
+  }
+  to{
+    margin-left: 0;
+    opacity: 1;
+  }
 }

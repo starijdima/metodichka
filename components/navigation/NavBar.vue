@@ -18,10 +18,10 @@
         <NavBarItem :pathLink="'/news'" :pathName="'Новости'" />
       </li>
       <li class="nav_bar__list_item">
-        <NavBarItem :pathLink="'/products'" :pathName="'Тестовые продукты'" />
+        <NavBarItem :pathLink="'/products'" :pathName="'В разработке'" />
       </li>
       <li class="nav_bar__list_item">
-        <NavBarItem :pathLink="'/develop'" :pathName="'Предложить фичу'" />
+        <NavBarItem :pathLink="'/develop'" :pathName="'Песочница'" />
       </li>
     </ul>
   </nav>
@@ -49,6 +49,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  @import "assets/vars";
   ul{
     list-style: none;
   }
@@ -56,18 +57,27 @@ export default {
     display: flex;
     flex-direction: row;
     align-items: center;
-    height: 88px;
-    position: relative;
+    height: calc-px(88);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(5px);
+    z-index: 10;
+    &__logo{
+      width: calc-px(50);
+    }
     &__list{
       display: flex;
       flex-direction: row;
-      margin-left: 50px;
+      margin-left: calc-px(50);
       height: 100%;
       display: flex;
       flex-direction: row;
       align-items: center;
       position: absolute;
-      left: 170px;
+      left: calc-px(170);
       top: -100%;
       transition: .3s;
       &_item{
